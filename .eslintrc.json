@@ -4,12 +4,6 @@
     "standard",
     "eslint:recommended"
   ],
-  "plugins": [
-    "mocha"
-  ],
-  "env": {
-    "mocha": true
-  },
   "rules": {
     "no-console": "off"
   }

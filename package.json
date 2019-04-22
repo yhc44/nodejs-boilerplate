@@ -1,14 +1,15 @@
 {
-  "name": "cbe-crypto-browser",
+  "name": "boilerplate-babel-eslint",
   "version": "0.0.1",
-  "description": "AES decryption with crypto-js",
+  "description": "Boilerplate for new projects (babel + eslint)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "cbe-crypto-browser"
+    "build-babel": "npx babel -d ./build ./src -s",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && npm run build-babel && chmod +x ./build/index.js",
+    "start": "npm run build && ./build/index.js",
+    "build-pkg": "pkg -t node10-macos-x64 -o bin/cbe-crypto ./build/index.js",
+    "dev": "npx babel-node src/app.js"
   },
   "author": "Yann Heeser",
   "license": "ISC",
@@ -30,8 +31,5 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0"
-  },
-  "dependencies": {
-    "crypto-js": "^3.1.9-1"
   }
 }
