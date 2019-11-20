@@ -1,41 +1,28 @@
 {
-  "name": "boilerplate-babel-eslint",
-  "version": "0.0.1",
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
   "description": "Boilerplate for new projects (babel + eslint)",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build-babel": "npx babel -d ./build ./src -s",
     "clean": "rm -rf build && mkdir build",
-    "build": "npm run clean && npm run build-babel && chmod +x ./build/index.js",
-    "start": "npm run build && ./build/index.js",
-    "build-pkg": "pkg -t node10-macos-x64 -o bin/cbe-crypto ./build/index.js",
+    "build": "yarn clean && yarn build-babel && chmod +x ./build/index.js",
+    "start": "./build/index.js",
     "dev": "npx babel-node src/app.js"
   },
   "author": "Yann Heeser",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/node": "^7.2.2",
-    "@babel/plugin-transform-regenerator": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/register": "^7.4.0",
-    "@babel/runtime": "^7.4.3",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "ajv": "^6.5.4",
-    "babel-eslint": "^9.0.0",
-    "babel-preset-env": "^1.7.0",
-    "core-js": "^3.1.4",
-    "eslint": "^5.14.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "regenerator-runtime": "^0.13.2"
+    "eslint": "^6.6.0"
   },
   "dependencies": {
+    "@babel/node": "^7.7.0",
     "chalk": "^2.4.2",
+    "eslint-config-standard": "^14.1.0",
     "moment-timezone": "^0.5.26",
     "winston": "^3.2.1"
   }
