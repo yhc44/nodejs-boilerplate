@@ -1,3 +1,7 @@
 import { logger } from './logger'
-// code goes here
-logger.info('App is runing')
+
+const helloArrow = () => {
+  logger.info('App is running!')
+}
+
+helloArrow()
